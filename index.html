@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Bruno Ribeiro - Fisioterapeuta Especializado</title>
-    <link rel="shortcut icon" href="img/drbruno-img.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="img/bruno-logo3.png" type="image/x-icon">
     <meta name="description" content="Fisioterapia Ortopédica, Traumatológica e Esportiva. Atendimento domiciliar. Reabilitação, prevenção e qualidade de vida.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -526,6 +526,9 @@ h1, h2, h3, h4, h5, h6 {
             margin-bottom: 1.5rem;
             position: relative;
             z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         
         .service-title {
@@ -564,6 +567,9 @@ h1, h2, h3, h4, h5, h6 {
             border-radius: var(--border-radius);
             box-shadow: var(--shadow);
             transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         
         .pricing-card:hover {
@@ -574,6 +580,7 @@ h1, h2, h3, h4, h5, h6 {
         .pricing-card h3 {
             color: var(--primary);
             margin-bottom: 1rem;
+            text-align: center;
         }
         
         .price {
@@ -587,6 +594,7 @@ h1, h2, h3, h4, h5, h6 {
             color: var(--gray);
             font-size: 0.9rem;
             line-height: 1.6;
+            text-align: center;
         }
         
         .payment-methods {
@@ -676,20 +684,111 @@ h1, h2, h3, h4, h5, h6 {
             line-height: 1.8;
         }
         
-        .education-item {
+        .qualities-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
             margin-bottom: 2rem;
-            padding-left: 2rem;
-            border-left: 3px solid var(--primary);
         }
         
-        .education-title {
-            font-weight: 600;
+        .quality-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .quality-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: var(--primary);
-            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+            flex-shrink: 0;
         }
         
-        .education-institution {
+        .quality-text {
+            font-size: 0.95rem;
+        }
+        
+        /* Professional Experience Section */
+        .experience-section {
+            background-color: var(--white);
+            padding: 6rem 0;
+        }
+        
+        .experience-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .experience-card {
+            background-color: var(--light);
+            border-radius: var(--border-radius);
+            padding: 2.5rem 2rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-top: 4px solid var(--primary);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .experience-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .experience-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80px;
+            height: 80px;
+            background: var(--primary-light);
+            border-radius: 50%;
+        }
+        
+        .experience-title {
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            text-align: center;
+        }
+        
+        .experience-list {
             color: var(--gray);
+            line-height: 1.7;
+            padding-left: 1.5rem;
+            text-align: left;
+        }
+        
+        .experience-list li {
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+        
+        .experience-list li:before {
+            content: "•";
+            color: var(--primary);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
         }
         
         /* Nossos Valores Section - ANTIGOS DEPOIMENTOS */
@@ -1127,6 +1226,10 @@ h1, h2, h3, h4, h5, h6 {
             .hero-image {
                 order: 1;
             }
+            
+            .qualities-grid {
+                grid-template-columns: 1fr;
+            }
         }
         
         @media screen and (max-width: 968px) {
@@ -1235,6 +1338,10 @@ h1, h2, h3, h4, h5, h6 {
             .valores-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .experience-grid {
+                grid-template-columns: 1fr;
+            }
         }
         
         @media screen and (max-width: 576px) {
@@ -1283,6 +1390,10 @@ h1, h2, h3, h4, h5, h6 {
             .stats-container {
                 grid-template-columns: 1fr;
             }
+            
+            .pricing-cards {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -1291,7 +1402,7 @@ h1, h2, h3, h4, h5, h6 {
     <header>
         <div class="header-container">
             <a href="#inicio" class="logo-container">
-                <img src="img/drbruno-img.jpg" class="logo-img" alt="Dr. Bruno Ribeiro">
+                <img src="img/bruno-logo3.png" class="logo-img" alt="Dr. Bruno Ribeiro">
                 <div class="logo-text">
                     <div class="logo-name">DR. BRUNO RIBEIRO</div>
                     <div class="logo-subtitle">FISIOTERAPEUTA</div>
@@ -1303,7 +1414,8 @@ h1, h2, h3, h4, h5, h6 {
                     <li class="nav-item"><a href="#inicio" class="nav-link"><i class="fas fa-home"></i> Início</a></li>
                     <li class="nav-item"><a href="#servicos" class="nav-link"><i class="fas fa-dumbbell"></i> Serviços</a></li>
                     <li class="nav-item"><a href="#sobre" class="nav-link"><i class="fas fa-user-md"></i> Sobre</a></li>
-                    <li class="nav-item"><a href="#valores" class="nav-link"><i class="fas fa-star"></i> Nossos Valores</a></li>
+                    <li class="nav-item"><a href="#experiencia" class="nav-link"><i class="fas fa-briefcase"></i> Experiência</a></li>
+                    <li class="nav-item"><a href="#valores" class="nav-link"><i class="fas fa-star"></i> Valores</a></li>
                     <li class="nav-item"><a href="#contato" class="nav-link"><i class="fas fa-envelope"></i> Contato</a></li>
                     <li class="nav-item"><a href="https://wa.me/5511954822375?text=Olá! Gostaria de agendar uma consulta." class="nav-link nav-cta" target="_blank"><i class="fab fa-whatsapp"></i> Agendar</a></li>
                 </ul>
@@ -1379,7 +1491,7 @@ h1, h2, h3, h4, h5, h6 {
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-bone"></i>
+                        <img src="img/bone-icon.png" alt="Fisioterapia Ortopédica" style="width: 60px; height: 60px; object-fit: contain;">
                     </div>
                     <h3 class="service-title">Fisioterapia Ortopédica</h3>
                     <p class="service-description">Tratamento de disfunções musculoesqueléticas, com foco na reabilitação de lesões e melhora da mobilidade.</p>
@@ -1406,7 +1518,7 @@ h1, h2, h3, h4, h5, h6 {
                         <i class="fas fa-dumbbell"></i>
                     </div>
                     <h3 class="service-title">Fortalecimento Muscular</h3>
-                    <p class="service-description">Programas personalizados para ganho de força muscular и melhora do condicionamento físico.</p>
+                    <p class="service-description">Programas personalizados para ganho de força muscular và melhora do condicionamento físico.</p>
                 </div>
                 
                 <div class="service-card">
@@ -1431,6 +1543,15 @@ h1, h2, h3, h4, h5, h6 {
 
     <div class="pricing-cards">
         <div class="pricing-card">
+            <h3>Fisioterapia</h3>
+            <div class="price">R$ 130,00 / 1 sessão</div>
+            <p class="price-details">
+                10 sessões: R$ 1.250,00<br>
+                Pacotes com desconto especial
+            </p>
+        </div>
+
+        <div class="pricing-card">
             <h3>Liberação Miofascial</h3>
             <div class="price">R$ 100,00 / 1 sessão</div>
             <p class="price-details">
@@ -1449,7 +1570,7 @@ h1, h2, h3, h4, h5, h6 {
         </div>
     </div>
 
-    <h3 style="margin-top: 2rem;">Formas de Pagamento</h3>
+    <h3 style="margin-top: 2rem; text-align: center;">Formas de Pagamento</h3>
     <div class="payment-methods">
         <i class="fas fa-credit-card" title="Cartão de Crédito"></i>
         <i class="fas fa-credit-card" title="Cartão de Débito"></i>
@@ -1480,23 +1601,92 @@ h1, h2, h3, h4, h5, h6 {
                         Fisioterapeuta dedicado à reabilitação de disfunções musculoesqueléticas, com foco na melhoria do equilíbrio, coordenação motora e qualidade de vida dos pacientes.
                     </p>
                     
-                    <div class="education">
-                        <div class="education-item">
-                            <h4 class="education-title">Graduação em Fisioterapia</h4>
-                            <p class="education-institution">UNIP - Universidade Paulista</p>
+                    <div class="qualities-grid">
+                        <div class="quality-item">
+                            <div class="quality-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="quality-text">Graduado em Fisioterapia pela UNIP</div>
                         </div>
                         
-                        <div class="education-item">
-                            <h4 class="education-title">Pós-graduação em Fisioterapia Traumato-Ortopédica</h4>
-                            <p class="education-institution">Em andamento</p>
+                        <div class="quality-item">
+                            <div class="quality-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="quality-text">Pós-graduado em Fisioterapia Traumato-Ortopédica e Esportiva</div>
+                        </div>
+                        
+                        <div class="quality-item">
+                            <div class="quality-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="quality-text">Atendimento humanizado e personalizado</div>
+                        </div>
+                        
+                        <div class="quality-item">
+                            <div class="quality-icon">
+                                <i class="fas fa-heartbeat"></i>
+                            </div>
+                            <div class="quality-text">Foco na recuperação e bem-estar integral</div>
                         </div>
                     </div>
                     
                     <p class="about-text">
-                        Com abordagem humanizada e baseada em evidências científicas, o Dr. Bruno Ribeiro busca oferecer o melhor tratamento para cada paciente, considerando suas necessidades individuais e objetivos.
+                        Com abordagem baseada em evidências científicas e vasta experiência clínica, o Dr. Bruno Ribeiro busca oferecer o melhor tratamento para cada paciente, considerando suas necessidades individuais e objetivos.
                     </p>
                     
-                    <a href="#contato" class="btn">Entre em contato</a>
+                    
+                    <a href="#experiencia" class="btn">Ver experiência profissional</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Experience Section -->
+    <section id="experiencia" class="experience-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Experiência Profissional</h2>
+            </div>
+            
+            <div class="experience-container">
+                <div class="experience-grid">
+                    <div class="experience-card">
+                        <div class="experience-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="experience-title">Atuação com Atletas</h3>
+                        <ul class="experience-list">
+                            <li>Fisioterapeuta de atletas sub-20 e sub-21 do time de Santo André</li>
+                            <li>Experiência com atletas corredores de rua, amadores e maratonistas</li>
+                            <li>Prevenção e tratamento de lesões esportivas</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="experience-card">
+                        <div class="experience-icon">
+                            <i class="fas fa-hospital-user"></i>
+                        </div>
+                        <h3 class="experience-title">Atendimento Clínico</h3>
+                        <ul class="experience-list">
+                            <li>Fisioterapia ortopédica e traumatológica</li>
+                            <li>Reabilitação pós-cirúrgica</li>
+                            <li>Tratamento de dores crônicas e agudas</li>
+                            <li>Atendimento domiciliar personalizado</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="experience-card">
+                        <div class="experience-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="experience-title">Formação Acadêmica</h3>
+                        <ul class="experience-list">
+                            <li>Graduado em Fisioterapia pela UNIP</li>
+                            <li>Pós-graduado em Fisioterapia Traumato-Ortopédica e Esportiva</li>
+                            <li>Participação em congressos e cursos de atualização</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1711,6 +1901,7 @@ h1, h2, h3, h4, h5, h6 {
                         <li><a href="#inicio" class="footer-link"><i class="fas fa-chevron-right"></i> Início</a></li>
                         <li><a href="#servicos" class="footer-link"><i class="fas fa-chevron-right"></i> Serviços</a></li>
                         <li><a href="#sobre" class="footer-link"><i class="fas fa-chevron-right"></i> Sobre</a></li>
+                        <li><a href="#experiencia" class="footer-link"><i class="fas fa-chevron-right"></i> Experiência</a></li>
                         <li><a href="#valores" class="footer-link"><i class="fas fa-chevron-right"></i> Nossos Valores</a></li>
                         <li><a href="#contato" class="footer-link"><i class="fas fa-chevron-right"></i> Contato</a></li>
                     </ul>
@@ -1918,7 +2109,7 @@ h1, h2, h3, h4, h5, h6 {
         
         // Animation on scroll
         function animateOnScroll() {
-            const elements = document.querySelectorAll('.service-card, .pricing-card, .about-image, .valor-card, .stat-item');
+            const elements = document.querySelectorAll('.service-card, .pricing-card, .about-image, .valor-card, .stat-item, .experience-card');
             
             elements.forEach(element => {
                 const elementPosition = element.getBoundingClientRect().top;
