@@ -11,6 +11,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Adicionando EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // Inicializando EmailJS com seu ID público (substitua pelo seu próprio ID se necessário)
+            emailjs.init("YOUR_PUBLIC_KEY"); // Você precisará criar uma conta gratuita em emailjs.com
+        })();
+    </script>
     <style>
         :root {
   /* 🎨 Cores principais */
@@ -48,6 +56,33 @@
   --font-title: "Poppins", sans-serif;
 }
 
+/* 🎨 Scrollbar estilizado */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--primary-light); /* fundo suave */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary); /* verde esmeralda */
+  border-radius: 10px;
+  border: 2px solid var(--primary-light); /* dá contraste */
+  transition: var(--transition);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-hover); /* tom mais vivo no hover */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) var(--primary-light);
+}
         
         * {
   margin: 0;
@@ -627,7 +662,7 @@ h1, h2, h3, h4, h5, h6 {
             align-items: center;
             color: white;
             font-size: 1.2rem;
-            font-weight: 600;
+            font-weight: 6;
         }
         
         .about-content h2 {
@@ -1270,7 +1305,7 @@ h1, h2, h3, h4, h5, h6 {
                     <li class="nav-item"><a href="#sobre" class="nav-link"><i class="fas fa-user-md"></i> Sobre</a></li>
                     <li class="nav-item"><a href="#valores" class="nav-link"><i class="fas fa-star"></i> Nossos Valores</a></li>
                     <li class="nav-item"><a href="#contato" class="nav-link"><i class="fas fa-envelope"></i> Contato</a></li>
-                    <li class="nav-item"><a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma consulta." class="nav-link nav-cta" target="_blank"><i class="fab fa-whatsapp"></i> Agendar</a></li>
+                    <li class="nav-item"><a href="https://wa.me/5511954822375?text=Olá! Gostaria de agendar uma consulta." class="nav-link nav-cta" target="_blank"><i class="fab fa-whatsapp"></i> Agendar</a></li>
                 </ul>
             </nav>
             
@@ -1289,7 +1324,7 @@ h1, h2, h3, h4, h5, h6 {
                 <h1>Dr. Bruno Ribeiro <span>Fisioterapeuta</span></h1>
                 <h2 class="hero-subtitle">Reabilitação, prevenção e qualidade de vida para você viver melhor.</h2>
                 <div class="hero-buttons">
-                    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma consulta." class="btn" target="_blank">
+                    <a href="https://wa.me/5511954822375?text=Olá! Gostaria de agendar uma consulta." class="btn" target="_blank">
                         <i class="fab fa-whatsapp"></i> Agende sua consulta
                     </a>
                     <a href="#servicos" class="btn btn-outline">Conhecer serviços</a>
@@ -1371,7 +1406,7 @@ h1, h2, h3, h4, h5, h6 {
                         <i class="fas fa-dumbbell"></i>
                     </div>
                     <h3 class="service-title">Fortalecimento Muscular</h3>
-                    <p class="service-description">Programas personalizados para ganho de força muscular e melhora do condicionamento físico.</p>
+                    <p class="service-description">Programas personalizados para ganho de força muscular и melhora do condicionamento físico.</p>
                 </div>
                 
                 <div class="service-card">
@@ -1392,30 +1427,37 @@ h1, h2, h3, h4, h5, h6 {
             </div>
             
             <div class="pricing-section">
-                <h2>Valores e Formas de Pagamento</h2>
-                
-                <div class="pricing-cards">
-                    <div class="pricing-card">
-                        <h3>Atendimento Domiciliar</h3>
-                        <div class="price">R$ 130,00</div>
-                        <p class="price-details">Sessão de 1 hora<br>Após 5 km: +R$ 2,00 por km</p>
-                    </div>
-                    
-                    <div class="pricing-card">
-                        <h3>Pacote com 10 sessões</h3>
-                        <div class="price">R$ 1.300,00</div>
-                        <p class="price-details">Economize R$ 100,00<br>Validade: 3 meses</p>
-                    </div>
-                </div>
-                
-                <h3 style="margin-top: 2rem;">Formas de Pagamento</h3>
-                <div class="payment-methods">
-                    <i class="fas fa-credit-card" title="Cartão de Crédito"></i>
-                    <i class="fas fa-credit-card" title="Cartão de Débito"></i>
-                    <i class="fas fa-money-bill-wave" title="PIX"></i>
-                    <i class="fas fa-exchange-alt" title="Transferência"></i>
-                </div>
-            </div>
+    <h2>Valores e Formas de Pagamento</h2>
+
+    <div class="pricing-cards">
+        <div class="pricing-card">
+            <h3>Liberação Miofascial</h3>
+            <div class="price">R$ 100,00 / 1 sessão</div>
+            <p class="price-details">
+                10 sessões: R$ 850,00<br>
+                Após 10 sessões, ganhe 1 sessão de brinde
+            </p>
+        </div>
+
+        <div class="pricing-card">
+            <h3>Recovery</h3>
+            <div class="price">R$ 100,00 / 1 sessão</div>
+            <p class="price-details">
+                10 sessões: R$ 800,00<br>
+                Após 10 sessões, ganhe 1 sessão de brinde
+            </p>
+        </div>
+    </div>
+
+    <h3 style="margin-top: 2rem;">Formas de Pagamento</h3>
+    <div class="payment-methods">
+        <i class="fas fa-credit-card" title="Cartão de Crédito"></i>
+        <i class="fas fa-credit-card" title="Cartão de Débito"></i>
+        <i class="fas fa-money-bill-wave" title="PIX"></i>
+        <i class="fas fa-exchange-alt" title="Transferência"></i>
+    </div>
+</div>
+
         </div>
     </section>
 
@@ -1571,7 +1613,7 @@ h1, h2, h3, h4, h5, h6 {
                         </div>
                         <div class="contact-details">
                             <h3>WhatsApp</h3>
-                            <p>(11) 99999-9999</p>
+                            <p>(11) 95482-2375</p>
                         </div>
                     </div>
                     
@@ -1581,7 +1623,7 @@ h1, h2, h3, h4, h5, h6 {
                         </div>
                         <div class="contact-details">
                             <h3>E-mail</h3>
-                            <p>contato@drbrunoribeiro.com</p>
+                            <p>brunorm07@hotmail.com</p>
                         </div>
                     </div>
                     
@@ -1659,7 +1701,7 @@ h1, h2, h3, h4, h5, h6 {
                     <div class="social-links">
                         <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://wa.me/5511999999999" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://wa.me/5511954822375" class="social-link"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
                 
@@ -1687,8 +1729,8 @@ h1, h2, h3, h4, h5, h6 {
                 <div class="footer-col">
                     <h3 class="footer-title">Contato</h3>
                     <ul class="footer-links">
-                        <li><a href="https://wa.me/5511999999999" class="footer-link"><i class="fab fa-whatsapp"></i> (11) 99999-9999</a></li>
-                        <li><a href="mailto:contato@drbrunoribeiro.com" class="footer-link"><i class="fas fa-envelope"></i> contato@drbrunoribeiro.com</a></li>
+                        <li><a href="https://wa.me/5511954822375" class="footer-link"><i class="fab fa-whatsapp"></i> (11) 95482-2375</a></li>
+                        <li><a href="mailto:brunorm07@hotmail.com" class="footer-link"><i class="fas fa-envelope"></i> brunorm07@hotmail.com</a></li>
                         <li><a href="#contato" class="footer-link"><i class="fas fa-map-marker-alt"></i> Atendimento domiciliar</a></li>
                     </ul>
                 </div>
@@ -1701,7 +1743,7 @@ h1, h2, h3, h4, h5, h6 {
     </footer>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma consulta." class="floating-whatsapp" target="_blank">
+    <a href="https://wa.me/5511954822375?text=Olá! Gostaria de agendar uma consulta." class="floating-whatsapp" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -1823,22 +1865,28 @@ h1, h2, h3, h4, h5, h6 {
             }
             
             if (isValid) {
-                // Simulação de envio do formulário
-                const formData = {
-                    name: nameInput.value,
-                    email: emailInput.value,
-                    phone: phoneInput.value,
-                    message: messageInput.value
+                // Enviar email usando EmailJS
+                const templateParams = {
+                    from_name: nameInput.value,
+                    from_email: emailInput.value,
+                    from_phone: phoneInput.value,
+                    message: messageInput.value,
+                    to_email: "brunorm07@hotmail.com"
                 };
                 
-                console.log('Formulário enviado:', formData);
-                
-                // Feedback para o usuário
-                formSuccess.style.display = 'block';
-                contactForm.reset();
-                
-                // Scroll to success message
-                formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                emailjs.send('service_xxx', 'template_xxx', templateParams)
+                    .then(function(response) {
+                        console.log('SUCCESS!', response.status, response.text);
+                        // Feedback para o usuário
+                        formSuccess.style.display = 'block';
+                        contactForm.reset();
+                        
+                        // Scroll to success message
+                        formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                        alert('Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente mais tarde ou entre em contato diretamente pelo WhatsApp.');
+                    });
             }
         });
         
