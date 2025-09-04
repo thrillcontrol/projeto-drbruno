@@ -11,14 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <!-- Adicionando EmailJS -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            // Inicializando EmailJS - SUBSTITUA PELAS SUAS PRÓPRIAS CREDENCIAIS
-            emailjs.init("YOUR_PUBLIC_KEY"); // Você precisará criar uma conta gratuita em emailjs.com
-        })();
-    </script>
     <style>
         :root {
   /* 🎨 Cores principais */
@@ -323,6 +315,7 @@ h1, h2, h3, h4, h5, h6 {
             color: white !important;
             margin-left: 0.5rem;
             padding: 0.8rem 1.5rem;
+            text-decoration: none;
         }
         
         .nav-cta:hover {
@@ -957,6 +950,7 @@ h1, h2, h3, h4, h5, h6 {
             font-size: 2rem;
             color: var(--primary-dark);
             margin-bottom: 1.5rem;
+            position: relative;
         }
         
         .contact-info-desc {
@@ -1733,7 +1727,7 @@ h1, h2, h3, h4, h5, h6 {
                     <i class="fas fa-dumbbell"></i>
                 </div>
                 <h3 class="service-title">Fortalecimento Muscular</h3>
-                <p class="service-description">Programas personalizados para ganho de força muscular e melhora do condicionamento físico.</p>
+                <p class="service-description">Programas personalizados para ganho de força muscular и melhora do condicionamento físico.</p>
             </div>
             
             <div class="service-card">
@@ -2005,7 +1999,7 @@ h1, h2, h3, h4, h5, h6 {
                     <i class="fas fa-chevron-down accordion-icon"></i>
                 </div>
                 <div class="accordion-content">
-                    <p>Cada sessão tem duração de aproximadamente 1 hora, incluindo avaliação, tratamento e orientações.</p>
+                    <p>Cada sessão has duração de aproximadamente 1 hora, incluindo avaliação, tratamento e orientações.</p>
                 </div>
             </div>
             
@@ -2074,28 +2068,35 @@ h1, h2, h3, h4, h5, h6 {
                 <h3 class="form-title">Envie uma mensagem</h3>
                 <p class="form-subtitle">Preencha o formulário abaixo e retornaremos em breve</p>
                 
-                <form id="contactForm">
+                <!-- FORMULÁRIO ATUALIZADO COM FORMSUBMIT -->
+                <form action="https://formsubmit.co/brunorm07@hotmail.com" method="POST" id="contactForm">
+                    <!-- Configurações do FormSubmit -->
+                    <input type="hidden" name="_subject" value="Novo contato do site - Dr. Bruno Ribeiro">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="https://seusite.com/obrigado.html">
+                    <input type="hidden" name="_captcha" value="false">
+                    
                     <div class="form-group">
                         <label for="name" class="form-label">Nome completo</label>
-                        <input type="text" id="name" class="form-input" placeholder="Seu nome completo" required>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="Seu nome completo" required>
                         <div class="form-error" id="nameError">Por favor, insira seu nome</div>
                     </div>
                     
                     <div class="form-group">
                         <label for="email" class="form-label">E-mail</label>
-                        <input type="email" id="email" class="form-input" placeholder="seu@email.com" required>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="seu@email.com" required>
                         <div class="form-error" id="emailError">Por favor, insira um e-mail válido</div>
                     </div>
                     
                     <div class="form-group">
                         <label for="phone" class="form-label">Telefone/WhatsApp</label>
-                        <input type="tel" id="phone" class="form-input" placeholder="(11) 99999-9999" required>
+                        <input type="tel" id="phone" name="phone" class="form-input" placeholder="(11) 99999-9999" required>
                         <div class="form-error" id="phoneError">Por favor, insira um telefone válido</div>
                     </div>
                     
                     <div class="form-group">
                         <label for="message" class="form-label">Mensagem</label>
-                        <textarea id="message" class="form-input" placeholder="Como posso ajudá-lo?" required></textarea>
+                        <textarea id="message" name="message" class="form-input" placeholder="Como posso ajudá-lo?" required></textarea>
                         <div class="form-error" id="messageError">Por favor, insira sua mensagem</div>
                     </div>
                     
@@ -2247,7 +2248,7 @@ h1, h2, h3, h4, h5, h6 {
         }
     });
 
-    // Form Validation and Submission - ATUALIZADO
+    // Form Validation and Submission - ATUALIZADO PARA FORMSUBMIT
     const contactForm = document.getElementById('contactForm');
     const nameInput = document.getElementById('name');
     const emailInput = document.getElementById('email');
@@ -2272,7 +2273,6 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
         let isValid = true;
         
         // Reset errors
@@ -2306,44 +2306,28 @@ h1, h2, h3, h4, h5, h6 {
             isValid = false;
         }
         
-        if (isValid) {
+        if (!isValid) {
+            e.preventDefault();
+        } else {
             // Mostrar loading
             submitButton.style.display = 'none';
             formLoading.style.display = 'block';
             
-            // Enviar email usando EmailJS
-            const templateParams = {
-                from_name: nameInput.value,
-                from_email: emailInput.value,
-                from_phone: phoneInput.value,
-                message: messageInput.value,
-                to_email: "brunorm07@hotmail.com"
-            };
-            
-            // SUBSTITUA COM SUAS CREDENCIAIS DO EMAILJS
-            emailjs.send('service_seu_servico', 'template_seu_template', templateParams)
-                .then(function(response) {
-                    console.log('SUCCESS!', response.status, response.text);
-                    
-                    // Feedback para o usuário
-                    formLoading.style.display = 'none';
-                    formSuccess.style.display = 'block';
-                    contactForm.reset();
-                    
-                    // Scroll to success message
-                    formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    
-                    // Restore submit button after 5 seconds
-                    setTimeout(() => {
-                        formSuccess.style.display = 'none';
-                        submitButton.style.display = 'inline-flex';
-                    }, 5000);
-                }, function(error) {
-                    console.log('FAILED...', error);
-                    formLoading.style.display = 'none';
+            // O FormSubmit cuidará do envio, então apenas mostramos o sucesso
+            setTimeout(() => {
+                formLoading.style.display = 'none';
+                formSuccess.style.display = 'block';
+                contactForm.reset();
+                
+                // Scroll to success message
+                formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
+                // Restore submit button after 5 seconds
+                setTimeout(() => {
+                    formSuccess.style.display = 'none';
                     submitButton.style.display = 'inline-flex';
-                    alert('Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente mais tarde ou entre em contato diretamente pelo WhatsApp.');
-                });
+                }, 5000);
+            }, 1500);
         }
     });
     
