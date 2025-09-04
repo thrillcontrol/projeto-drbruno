@@ -853,232 +853,6 @@ h1, h2, h3, h4, h5, h6 {
             color: var(--accent);
         }
         
-        /* NOVA SEÇÃO DE PREÇOS - ATUALIZADA E MELHORADA */
-        .pricing-section {
-            background: var(--primary-light);
-            padding: 6rem 2rem;
-            text-align: center;
-        }
-        
-        .pricing-header {
-            margin-bottom: 3rem;
-        }
-        
-        .pricing-header h2 {
-            color: var(--primary-dark);
-            margin-bottom: 1rem;
-        }
-        
-        .pricing-header p {
-            color: var(--gray);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        .pricing-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        .pricing-card {
-            background: var(--white);
-            padding: 2.5rem 2rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-            border: 1px solid rgba(26, 79, 99, 0.1);
-        }
-        
-        .pricing-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-hover);
-            border-color: var(--accent);
-        }
-        
-        .pricing-card.featured {
-            border: 2px solid var(--accent);
-            transform: scale(1.03);
-        }
-        
-        .pricing-card.featured:before {
-            content: 'Mais Procurado';
-            position: absolute;
-            top: 15px;
-            right: -30px;
-            background: var(--accent);
-            color: white;
-            padding: 5px 30px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            transform: rotate(45deg);
-        }
-        
-        .pricing-icon {
-            width: 70px;
-            height: 70px;
-            background: var(--primary-light);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary);
-            font-size: 1.8rem;
-            transition: var(--transition);
-        }
-        
-        .pricing-card:hover .pricing-icon {
-            background: var(--gradient);
-            color: white;
-            transform: scale(1.1);
-        }
-        
-        .pricing-card h3 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-            text-align: center;
-            font-size: 1.5rem;
-            transition: var(--transition);
-        }
-        
-        .pricing-card:hover h3 {
-            color: var(--secondary);
-        }
-        
-        .price {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--secondary);
-            margin-bottom: 1rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            transition: var(--transition);
-        }
-        
-        .pricing-card:hover .price {
-            color: var(--primary-dark);
-            transform: scale(1.05);
-        }
-        
-        .price-single {
-            font-size: 1.2rem;
-            color: var(--gray);
-            font-weight: 500;
-        }
-        
-        .price-details {
-            color: var(--gray);
-            line-height: 1.6;
-            text-align: center;
-            margin-bottom: 1.5rem;
-            flex-grow: 1;
-            transition: var(--transition);
-        }
-        
-        .pricing-card:hover .price-details {
-            color: var(--dark);
-        }
-        
-        .price-benefit {
-            background: var(--secondary-light);
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            color: var(--secondary);
-            font-weight: 500;
-            font-size: 0.9rem;
-            margin-top: 0.5rem;
-            display: inline-block;
-            transition: var(--transition);
-        }
-        
-        .pricing-card:hover .price-benefit {
-            background: var(--accent);
-            color: white;
-            transform: translateY(-3px);
-        }
-        
-        .pricing-cta {
-            margin-top: 1.5rem;
-            width: 100%;
-        }
-        
-        .pricing-card .btn {
-            transition: var(--transition);
-        }
-        
-        .pricing-card:hover .btn {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(26, 79, 99, 0.3);
-        }
-        
-        .payment-section {
-            margin-top: 3rem;
-            padding-top: 3rem;
-            border-top: 1px solid rgba(26, 79, 99, 0.1);
-        }
-        
-        .payment-title {
-            margin-bottom: 1.5rem;
-            color: var(--primary-dark);
-        }
-        
-        .payment-methods {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-        }
-        
-        .payment-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.5rem;
-            transition: var(--transition);
-        }
-        
-        .payment-item:hover {
-            transform: translateY(-5px);
-        }
-        
-        .payment-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            color: var(--primary);
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-        
-        .payment-item:hover .payment-icon {
-            background: var(--gradient);
-            color: white;
-            box-shadow: var(--shadow-hover);
-        }
-        
-        .payment-name {
-            font-size: 0.9rem;
-            color: var(--gray);
-            transition: var(--transition);
-        }
-        
-        .payment-item:hover .payment-name {
-            color: var(--primary-dark);
-            font-weight: 500;
-        }
-        
         /* FAQ Section */
         .faq-section {
             background: var(--primary-light);
@@ -1290,6 +1064,7 @@ h1, h2, h3, h4, h5, h6 {
             height: 100%;
             background: var(--gradient);
             transition: var(--transition);
+            z-index: 0;
         }
         
         .contact-form-container:hover::before {
@@ -1493,11 +1268,16 @@ h1, h2, h3, h4, h5, h6 {
         .footer-link i {
             margin-right: 0.5rem;
             font-size: 0.9rem;
+            transition: var(--transition);
         }
         
         .footer-link:hover {
             color: var(--white);
             padding-left: 5px;
+        }
+        
+        .footer-link:hover i {
+            transform: translateX(3px);
         }
         
         .social-links {
@@ -1530,6 +1310,7 @@ h1, h2, h3, h4, h5, h6 {
             margin-top: 3rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: #aaa;
+            font-size: 0.9rem;
         }
         
         /* Back to Top Button */
@@ -1736,8 +1517,8 @@ h1, h2, h3, h4, h5, h6 {
                 padding: 2rem 1.5rem;
             }
             
-            .pricing-section {
-                padding: 4rem 1rem;
+            .faq-section {
+                padding: 4rem 0;
             }
             
             .contact-item {
@@ -1760,14 +1541,6 @@ h1, h2, h3, h4, h5, h6 {
             
             .experience-grid {
                 grid-template-columns: 1fr;
-            }
-            
-            .pricing-cards {
-                grid-template-columns: 1fr;
-            }
-            
-            .pricing-card.featured {
-                transform: scale(1);
             }
             
             .contact-form-container {
@@ -1818,14 +1591,6 @@ h1, h2, h3, h4, h5, h6 {
                 grid-template-columns: 1fr;
             }
             
-            .payment-methods {
-                gap: 1rem;
-            }
-            
-            .payment-item {
-                flex: 0 0 calc(50% - 0.5rem);
-            }
-            
             .logo-name {
                 font-size: 1.2rem;
             }
@@ -1863,7 +1628,7 @@ h1, h2, h3, h4, h5, h6 {
                 <li class="nav-item"><a href="#servicos" class="nav-link"><i class="fas fa-dumbbell"></i> Serviços</a></li>
                 <li class="nav-item"><a href="#sobre" class="nav-link"><i class="fas fa-user-md"></i> Sobre</a></li>
                 <li class="nav-item"><a href="#experiencia" class="nav-link"><i class="fas fa-briefcase"></i> Experiência</a></li>
-                <li class="nav-item"><a href="#valores-pagamento" class="nav-link"><i class="fas fa-money-bill-wave"></i> Valores</a></li>
+                <li class="nav-item"><a href="#valores" class="nav-link"><i class="fas fa-star"></i> Valores</a></li>
                 <li class="nav-item"><a href="#contato" class="nav-link"><i class="fas fa-envelope"></i> Contato</a></li>
                 <li class="nav-item"><a href="https://wa.me/5511954822375?text=Olá! Gostaria de agendar uma consulta." class="nav-link nav-cta" target="_blank"><i class="fab fa-whatsapp"></i> Agendar</a></li>
             </ul>
@@ -1944,7 +1709,7 @@ h1, h2, h3, h4, h5, h6 {
                     <img src="img/osso-articulacao.png" alt="Fisioterapia Ortopédica" style="width: 60px; height: 60px; object-fit: contain;">
                 </div>
                 <h3 class="service-title">Fisioterapia Ortopédica</h3>
-                <p class="service-description">Tratamento de disfunções musculoesqueléticas, com foco na reabilitação de lesões и melhora da mobilidade.</p>
+                <p class="service-description">Tratamento de disfunções musculoesqueléticas, com foco na reabilitação de lesões e melhora da mobilidade.</p>
             </div>
             
             <div class="service-card">
@@ -2107,7 +1872,7 @@ h1, h2, h3, h4, h5, h6 {
                     </div>
                     <h3 class="experience-title">Valorização e Respeito às Pessoas</h3>
                     <ul class="experience-list">
-                        <li>Reconhecer e tratar todos os profissionais e pacientes com dignidade e respeito</li>
+                        <li>Reconhecer e tratar todos os profissionais e pacientes com dignidade and respeito</li>
                     </ul>
                 </div>
                 
@@ -2172,7 +1937,7 @@ h1, h2, h3, h4, h5, h6 {
                     <ul class="experience-list">
                         <li>Fisioterapeuta de atletas sub-20 e sub-21 do time de Santo André</li>
                         <li>Experiência com atletas corredores de rua, amadores e maratonistas</li>
-                        <li>Prevenção e tratamento de lesões esportivas</li>
+                        <li>Prevenção and tratamento de lesões esportivas</li>
                     </ul>
                 </div>
                 
@@ -2206,557 +1971,450 @@ h1, h2, h3, h4, h5, h6 {
     </div>
 </section>
 
-<!-- Valores Section -->
-<section id="valores-pagamento" class="pricing-section">
+<!-- FAQ Section -->
+<section class="faq-section">
     <div class="container">
-        <div class="pricing-header">
-            <h2>Valores e Formas de Pagamento</h2>
-            <p>Oferecemos pacotes com descontos especiais e condições facilitadas para seu tratamento</p>
+        <div class="section-title">
+            <h2>Perguntas Frequentes</h2>
         </div>
-
-
-            <div class="pricing-cards">
-                <div class="pricing-card">
-                    <div class="pricing-icon">
-                        <i class="fas fa-user-md"></i>
-                    </div>
-                    <h3>Fisioterapia</h3>
-                    <div class="price">
-                        R$ 130,00
-                        <span class="price-single">/ 1 sessão</span>
-                    </div>
-                    <p class="price-details">
-                        <strong>10 sessões: R$ 1.250,00</strong><br>
-                        Economize R$ 50,00 no pacote
-                    </p>
-                    <div class="price-benefit">Pacotes com desconto especial</div>
-                    <div class="pricing-cta">
-                        <a href="https://wa.me/5511954822375?text=Olá! Gostaria de agendar uma sessão de Fisioterapia." class="btn" target="_blank">
-                            <i class="fab fa-whatsapp"></i> Agendar
-                        </a>
-                    </div>
+        
+        <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span>Como agendar uma consulta?</span>
+                    <i class="fas fa-chevron-down accordion-icon"></i>
                 </div>
-
-                <div class="pricing-card featured">
-                    <div class="pricing-icon">
-                        <i class="fas fa-hands"></i>
-                    </div>
-                    <h3>Liberação Miofascial</h3>
-                    <div class="price">
-                        R$ 100,00
-                        <span class="price-single">/ 1 sessão</span>
-                    </div>
-                    <p class="price-details">
-                        <strong>10 sessões: R$ 850,00</strong><br>
-                        Economize R$ 150,00 no pacote
-                    </p>
-                    <div class="price-benefit">+1 sessão de brinde após 10 sessões</div>
-                    <div class="pricing-cta">
-                        <a href="https://wa.me/5511954822375?text=Olá! Gostaria de agendar uma sessão de Liberação Miofascial." class="btn" target="_blank">
-                            <i class="fab fa-whatsapp"></i> Agendar
-                        </a>
-                    </div>
-                </div>
-
-                <div class="pricing-card">
-                    <div class="pricing-icon">
-                        <i class="fas fa-heartbeat"></i>
-                    </div>
-                    <h3>Recovery</h3>
-                    <div class="price">
-                        R$ 100,00
-                        <span class="price-single">/ 1 sessão</span>
-                    </div>
-                    <p class="price-details">
-                        <strong>10 sessões: R$ 800,00</strong><br>
-                        Economize R$ 200,00 no pacote
-                    </p>
-                    <div class="price-benefit">+1 sessão de brinde após 10 sessões</div>
-                    <div class="pricing-cta">
-                        <a href="https://wa.me/5511954822375?text=Olá! Gostaria de agendar uma sessão de Recovery." class="btn" target="_blank">
-                            <i class="fab fa-whatsapp"></i> Agendar
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="payment-section">
-                <h3 class="payment-title">Formas de Pagamento</h3>
-                <div class="payment-methods">
-                    <div class="payment-item">
-                        <div class="payment-icon">
-                            <i class="fas fa-credit-card"></i>
-                        </div>
-                        <span class="payment-name">Cartão de Crédito</span>
-                    </div>
-                    <div class="payment-item">
-                        <div class="payment-icon">
-                            <i class="fas fa-credit-card"></i>
-                        </div>
-                        <span class="payment-name">Cartão de Débito</span>
-                    </div>
-                    <div class="payment-item">
-                        <div class="payment-icon">
-                            <i class="fas fa-money-bill-wave"></i>
-                        </div>
-                        <span class="payment-name">PIX</span>
-                    </div>
-                    <div class="payment-item">
-                        <div class="payment-icon">
-                            <i class="fas fa-exchange-alt"></i>
-                        </div>
-                        <span class="payment-name">Transferência</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Perguntas Frequentes</h2>
-            </div>
-            
-            <div class="accordion">
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <span>Como agendar uma consulta?</span>
-                        <i class="fas fa-chevron-down accordion-icon"></i>
-                    </div>
-                    <div class="accordion-content">
-                        <p>Você pode agendar uma consulta entrando em contato via WhatsApp, telefone ou preenchendo o formulário de contato no site. Responderemos o mais breve possível para confirmar a disponibilidade.</p>
-                    </div>
-                </div>
-                
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <span>Quais regiões são atendidas?</span>
-                        <i class="fas fa-chevron-down accordion-icon"></i>
-                    </div>
-                    <div class="accordion-content">
-                        <p>Atendemos na Grande São Paulo. Para distâncias superiores a 5km do centro, é cobrada uma taxa adicional de R$ 2,00 por km.</p>
-                    </div>
-                </div>
-                
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <span>Quanto tempo dura cada sessão?</span>
-                        <i class="fas fa-chevron-down accordion-icon"></i>
-                    </div>
-                    <div class="accordion-content">
-                        <p>Cada sessão tem duração de aproximadamente 1 hora, incluindo avaliação, treatment e orientações.</p>
-                    </div>
-                </div>
-                
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <span>Quais são as formas de pagamento?</span>
-                        <i class="fas fa-chevron-down accordion-icon"></i>
-                    </div>
-                    <div class="accordion-content">
-                        <p>Aceitamos cartão de crédito, débito, PIX e transferência bancária.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section - COMPLETAMENTE ATUALIZADA -->
-    <section id="contato" class="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Entre em Contato</h2>
-            </div>
-            
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h2 class="contact-info-title">Vamos conversar?</h2>
-                    <p class="contact-info-desc">Estou à disposição para esclarecer suas dúvidas e agendar seu tratamento. Entre em contato por qualquer um dos canais abaixo:</p>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fab fa-whatsapp"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>WhatsApp</h3>
-                            <a href="https://wa.me/5511954822375">(11) 95482-2375</a>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>E-mail</h3>
-                            <a href="mailto:brunorm07@hotmail.com">brunorm07@hotmail.com</a>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Atendimento</h3>
-                            <p>Domiciliar - Grande São Paulo</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-social">
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://wa.me/5511954822375" class="social-link"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-                
-                <div class="contact-form-container">
-                    <h3 class="form-title">Envie uma mensagem</h3>
-                    <p class="form-subtitle">Preencha o formulário abaixo e retornaremos em breve</p>
-                    
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name" class="form-label">Nome completo</label>
-                            <input type="text" id="name" class="form-input" placeholder="Seu nome completo" required>
-                            <div class="form-error" id="nameError">Por favor, insira seu nome</div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email" class="form-label">E-mail</label>
-                            <input type="email" id="email" class="form-input" placeholder="seu@email.com" required>
-                            <div class="form-error" id="emailError">Por favor, insira um e-mail válido</div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone" class="form-label">Telefone/WhatsApp</label>
-                            <input type="tel" id="phone" class="form-input" placeholder="(11) 99999-9999" required>
-                            <div class="form-error" id="phoneError">Por favor, insira um telefone válido</div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message" class="form-label">Mensagem</label>
-                            <textarea id="message" class="form-input" placeholder="Como posso ajudá-lo?" required></textarea>
-                            <div class="form-error" id="messageError">Por favor, insira sua mensagem</div>
-                        </div>
-                        
-                        <button type="submit" class="btn" id="submitButton">
-                            <i class="fas fa-paper-plane"></i> Enviar mensagem
-                        </button>
-                        
-                        <div class="form-loading" id="formLoading">
-                            <i class="fas fa-spinner"></i> Enviando sua mensagem...
-                        </div>
-                        
-                        <div class="form-success" id="formSuccess">
-                            <i class="fas fa-check-circle"></i> Mensagem enviada com sucesso! Entraremos em contato em breve.
-                        </div>
-                    </form>
-                    
-                    <div class="payment-info">
-                        <h3 class="payment-title">Aceitamos</h3>
-                        <div class="payment-icons">
-                            <i class="fas fa-credit-card" title="Cartão de Crédito"></i>
-                            <i class="fas fa-credit-card" title="Cartão de Débito"></i>
-                            <i class="fas fa-money-bill-wave" title="PIX"></i>
-                            <i class="fas fa-exchange-alt" title="Transferência"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-container">
-                <div class="footer-col">
-                    <a href="#inicio" class="footer-logo">
-                        DR<br>BRUNO<br>RIBEIRO
-                        <span>FISIOTERAPEUTA</span>
-                    </a>
-                    <p class="footer-text">
-                        Fisioterapia especializada com foco na reabilitação, prevenção e qualidade de vida. Atendimento domiciliar na Grande São Paulo.
-                    </p>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://wa.me/5511954822375" class="social-link"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-                
-                <div class="footer-col">
-                    <h3 class="footer-title">Links Rápidos</h3>
-                    <ul class="footer-links">
-                        <li><a href="#inicio" class="footer-link"><i class="fas fa-chevron-right"></i> Início</a></li>
-                        <li><a href="#servicos" class="footer-link"><i class="fas fa-chevron-right"></i> Serviços</a></li>
-                        <li><a href="#sobre" class="footer-link"><i class="fas fa-chevron-right"></i> Sobre</a></li>
-                        <li><a href="#valores" class="footer-link"><i class="fas fa-chevron-right"></i> Valores</a></li>
-                        <li><a href="#experiencia" class="footer-link"><i class="fas fa-chevron-right"></i> Experiência</a></li>
-                        <li><a href="#valores-pagamento" class="footer-link"><i class="fas fa-chevron-right"></i> Preços</a></li>
-                        <li><a href="#contato" class="footer-link"><i class="fas fa-chevron-right"></i> Contato</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h3 class="footer-title">Serviços</h3>
-                    <ul class="footer-links">
-                        <li><a href="#servicos" class="footer-link"><i class="fas fa-chevron-right"></i> Fisioterapia Ortopédica</a></li>
-                        <li><a href="#servicos" class="footer-link"><i class="fas fa-chevron-right"></i> Fisioterapia Traumatológica</a></li>
-                        <li><a href="#servicos" class="footer-link"><i class="fas fa-chevron-right"></i> Fisioterapia Esportiva</a></li>
-                        <li><a href="#servicos" class="footer-link"><i class="fas fa-chevron-right"></i> Liberação Miofascial</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h3 class="footer-title">Contato</h3>
-                    <ul class="footer-links">
-                        <li><a href="https://wa.me/5511954822375" class="footer-link"><i class="fab fa-whatsapp"></i> (11) 95482-2375</a></li>
-                        <li><a href="mailto:brunorm07@hotmail.com" class="footer-link"><i class="fas fa-envelope"></i> brunorm07@hotmail.com</a></li>
-                        <li><a href="#contato" class="footer-link"><i class="fas fa-map-marker-alt"></i> Atendimento domiciliar</a></li>
-                    </ul>
+                <div class="accordion-content">
+                    <p>Você pode agendar uma consulta entrando em contato via WhatsApp, telefone ou preenchendo o formulário de contato no site. Responderemos o mais breve possível para confirmar a disponibilidade.</p>
                 </div>
             </div>
             
-            <div class="copyright">
-                <p>&copy; 2025 Dr. Bruno Ribeiro - Todos os direitos reservados.</p>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span>Quais regiões são atendidas?</span>
+                    <i class="fas fa-chevron-down accordion-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <p>Atendemos na Grande São Paulo. Para distâncias superiores a 5km do centro, é cobrada uma taxa adicional de R$ 2,00 por km.</p>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span>Quanto tempo dura cada sessão?</span>
+                    <i class="fas fa-chevron-down accordion-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <p>Cada sessão tem duração de aproximadamente 1 hora, incluindo avaliação, tratamento e orientações.</p>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span>Quais são as formas de pagamento?</span>
+                    <i class="fas fa-chevron-down accordion-icon"></i>
+                </div>
+                <div class="accordion-content">
+                    <p>Aceitamos cartão de crédito, débito, PIX e transferência bancária. Entre em contato para mais informações sobre valores e condições de pagamento.</p>
+                </div>
             </div>
         </div>
-    </footer>
-
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/5511954822375?text=Olá! Gostaria de agendar uma consulta." class="floating-whatsapp" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <!-- Back to Top Button -->
-    <div class="back-to-top">
-        <i class="fas fa-arrow-up"></i>
     </div>
+</section>
 
-    <script>
-        // Menu Mobile para o novo header
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('.nav-menu');
-        const header = document.querySelector('header');
+<!-- Contact Section - COMPLETAMENTE ATUALIZADA -->
+<section id="contato" class="contact">
+    <div class="container">
+        <div class="section-title">
+            <h2>Entre em Contato</h2>
+        </div>
         
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2 class="contact-info-title">Vamos conversar?</h2>
+                <p class="contact-info-desc">Estou à disposição para esclarecer suas dúvidas e agendar seu tratamento. Entre em contato por qualquer um dos canais abaixo:</p>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>WhatsApp</h3>
+                        <a href="https://wa.me/5511954822375">(11) 95482-2375</a>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>E-mail</h3>
+                        <a href="mailto:brunorm07@hotmail.com">brunorm07@hotmail.com</a>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Atendimento</h3>
+                        <p>Domiciliar - Grande São Paulo</p>
+                    </div>
+                </div>
+                
+                <div class="contact-social">
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/5511954822375" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
             
-            // Impede a rolagem do corpo quando o menu mobile está aberto
-            if (navMenu.classList.contains('active')) {
-                document.body.style.overflow = 'hidden';
-            } else {
-                document.body.style.overflow = 'auto';
-            }
-        });
+            <div class="contact-form-container">
+                <h3 class="form-title">Envie uma mensagem</h3>
+                <p class="form-subtitle">Preencha o formulário abaixo e retornaremos em breve</p>
+                
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Nome completo</label>
+                        <input type="text" id="name" class="form-input" placeholder="Seu nome completo" required>
+                        <div class="form-error" id="nameError">Por favor, insira seu nome</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="form-label">E-mail</label>
+                        <input type="email" id="email" class="form-input" placeholder="seu@email.com" required>
+                        <div class="form-error" id="emailError">Por favor, insira um e-mail válido</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Telefone/WhatsApp</label>
+                        <input type="tel" id="phone" class="form-input" placeholder="(11) 99999-9999" required>
+                        <div class="form-error" id="phoneError">Por favor, insira um telefone válido</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" class="form-label">Mensagem</label>
+                        <textarea id="message" class="form-input" placeholder="Como posso ajudá-lo?" required></textarea>
+                        <div class="form-error" id="messageError">Por favor, insira sua mensagem</div>
+                    </div>
+                    
+                    <button type="submit" class="btn" id="submitButton">
+                        <i class="fas fa-paper-plane"></i> Enviar mensagem
+                    </button>
+                    
+                    <div class="form-loading" id="formLoading">
+                        <i class="fas fa-spinner"></i> Enviando sua mensagem...
+                    </div>
+                    
+                    <div class="form-success" id="formSuccess">
+                        <i class="fas fa-check-circle"></i> Mensagem enviada com sucesso! Entraremos em contato em breve.
+                    </div>
+                </form>
+                
+                <div class="payment-info">
+                    <h3 class="payment-title">Aceitamos</h3>
+                    <div class="payment-icons">
+                        <i class="fas fa-credit-card" title="Cartão de Crédito"></i>
+                        <i class="fas fa-credit-card" title="Cartão de Débito"></i>
+                        <i class="fas fa-money-bill-wave" title="PIX"></i>
+                        <i class="fas fa-exchange-alt" title="Transferência"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-container">
+            <div class="footer-col">
+                <a href="#inicio" class="footer-logo">
+                    DR<br>BRUNO<br>RIBEIRO
+                    <span>FISIOTERAPEUTA</span>
+                </a>
+                <p class="footer-text">
+                    Fisioterapia especializada com foco na reabilitação, prevenção e qualidade de vida. Atendimento domiciliar na Grande São Paulo.
+                </p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/5511954822375" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h3 class="footer-title">Links Rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="#inicio" class="footer-link"><i class="fas fa-chevron-right"></i> Início</a></li>
+                    <li><a href="#servicos" class="footer-link"><i class="fas fa-chevron-right"></i> Serviços</a></li>
+                    <li><a href="#sobre" class="footer-link"><i class="fas fa-chevron-right"></i> Sobre</a></li>
+                    <li><a href="#valores" class="footer-link"><i class="fas fa-chevron-right"></i> Valores</a></li>
+                    <li><a href="#experiencia" class="footer-link"><i class="fas fa-chevron-right"></i> Experiência</a></li>
+                    <li><a href="#contato" class="footer-link"><i class="fas fa-chevron-right"></i> Contato</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3 class="footer-title">Serviços</h3>
+                <ul class="footer-links">
+                    <li><a href="#servicos" class="footer-link"><i class="fas fa-chevron-right"></i> Fisioterapia Ortopédica</a></li>
+                    <li><a href="#servicos" class="footer-link"><i class="fas fa-chevron-right"></i> Fisioterapia Traumatológica</a></li>
+                    <li><a href="#servicos" class="footer-link"><i class="fas fa-chevron-right"></i> Fisioterapia Esportiva</a></li>
+                    <li><a href="#servicos" class="footer-link"><i class="fas fa-chevron-right"></i> Liberação Miofascial</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3 class="footer-title">Contato</h3>
+                <ul class="footer-links">
+                    <li><a href="https://wa.me/5511954822375" class="footer-link"><i class="fab fa-whatsapp"></i> (11) 95482-2375</a></li>
+                    <li><a href="mailto:brunorm07@hotmail.com" class="footer-link"><i class="fas fa-envelope"></i> brunorm07@hotmail.com</a></li>
+                    <li><a href="#contato" class="footer-link"><i class="fas fa-map-marker-alt"></i> Atendimento domiciliar</a></li>
+                </ul>
+            </div>
+        </div>
         
-        // Fechar o menu ao clicar em um link
-        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+        <div class="copyright">
+            <p>&copy; 2025 Dr. Bruno Ribeiro - Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/5511954822375?text=Olá! Gostaria de agendar uma consulta." class="floating-whatsapp" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Back to Top Button -->
+<div class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+</div>
+
+<script>
+    // Menu Mobile para o novo header
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    const header = document.querySelector('header');
+    
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        
+        // Impede a rolagem do corpo quando o menu mobile está aberto
+        if (navMenu.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+    });
+    
+    // Fechar o menu ao clicar em um link
+    document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }));
+    
+    // Header scroll effect
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('header-scrolled');
+        } else {
+            header.classList.remove('header-scrolled');
+        }
+        
+        // Show back to top button
+        const backToTop = document.querySelector('.back-to-top');
+        if (window.scrollY > 500) {
+            backToTop.classList.add('active');
+        } else {
+            backToTop.classList.remove('active');
+        }
+    });
+    
+    // Fechar menu ao clicar fora dele (apenas mobile)
+    document.addEventListener('click', (e) => {
+        const isMenuOpen = navMenu.classList.contains('active');
+        const isClickInsideMenu = navMenu.contains(e.target);
+        const isClickOnHamburger = hamburger.contains(e.target);
+        
+        if (isMenuOpen && !isClickInsideMenu && !isClickOnHamburger) {
             hamburger.classList.remove('active');
             navMenu.classList.remove('active');
             document.body.style.overflow = 'auto';
-        }));
-        
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('header-scrolled');
-            } else {
-                header.classList.remove('header-scrolled');
-            }
-            
-            // Show back to top button
-            const backToTop = document.querySelector('.back-to-top');
-            if (window.scrollY > 500) {
-                backToTop.classList.add('active');
-            } else {
-                backToTop.classList.remove('active');
-            }
-        });
-        
-        // Fechar menu ao clicar fora dele (apenas mobile)
-        document.addEventListener('click', (e) => {
-            const isMenuOpen = navMenu.classList.contains('active');
-            const isClickInsideMenu = navMenu.contains(e.target);
-            const isClickOnHamburger = hamburger.contains(e.target);
-            
-            if (isMenuOpen && !isClickInsideMenu && !isClickOnHamburger) {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            }
-        });
+        }
+    });
 
-        // Form Validation and Submission - ATUALIZADO
-        const contactForm = document.getElementById('contactForm');
-        const nameInput = document.getElementById('name');
-        const emailInput = document.getElementById('email');
-        const phoneInput = document.getElementById('phone');
-        const messageInput = document.getElementById('message');
-        const nameError = document.getElementById('nameError');
-        const emailError = document.getElementById('emailError');
-        const phoneError = document.getElementById('phoneError');
-        const messageError = document.getElementById('messageError');
-        const formSuccess = document.getElementById('formSuccess');
-        const formLoading = document.getElementById('formLoading');
-        const submitButton = document.getElementById('submitButton');
+    // Form Validation and Submission - ATUALIZADO
+    const contactForm = document.getElementById('contactForm');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const phoneInput = document.getElementById('phone');
+    const messageInput = document.getElementById('message');
+    const nameError = document.getElementById('nameError');
+    const emailError = document.getElementById('emailError');
+    const phoneError = document.getElementById('phoneError');
+    const messageError = document.getElementById('messageError');
+    const formSuccess = document.getElementById('formSuccess');
+    const formLoading = document.getElementById('formLoading');
+    const submitButton = document.getElementById('submitButton');
+    
+    function validateEmail(email) {
+        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+    }
+    
+    function validatePhone(phone) {
+        const re = /^\(?\d{2}\)?[\s-]?\d{4,5}-?\d{4}$/;
+        return re.test(phone);
+    }
+    
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        let isValid = true;
         
-        function validateEmail(email) {
-            const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-            return re.test(String(email).toLowerCase());
+        // Reset errors
+        nameError.style.display = 'none';
+        emailError.style.display = 'none';
+        phoneError.style.display = 'none';
+        messageError.style.display = 'none';
+        formSuccess.style.display = 'none';
+        
+        // Validate name
+        if (!nameInput.value.trim()) {
+            nameError.style.display = 'block';
+            isValid = false;
         }
         
-        function validatePhone(phone) {
-            const re = /^\(?\d{2}\)?[\s-]?\d{4,5}-?\d{4}$/;
-            return re.test(phone);
+        // Validate email
+        if (!validateEmail(emailInput.value)) {
+            emailError.style.display = 'block';
+            isValid = false;
         }
         
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            let isValid = true;
+        // Validate phone
+        if (!validatePhone(phoneInput.value)) {
+            phoneError.style.display = 'block';
+            isValid = false;
+        }
+        
+        // Validate message
+        if (!messageInput.value.trim()) {
+            messageError.style.display = 'block';
+            isValid = false;
+        }
+        
+        if (isValid) {
+            // Mostrar loading
+            submitButton.style.display = 'none';
+            formLoading.style.display = 'block';
             
-            // Reset errors
-            nameError.style.display = 'none';
-            emailError.style.display = 'none';
-            phoneError.style.display = 'none';
-            messageError.style.display = 'none';
-            formSuccess.style.display = 'none';
+            // Enviar email usando EmailJS
+            const templateParams = {
+                from_name: nameInput.value,
+                from_email: emailInput.value,
+                from_phone: phoneInput.value,
+                message: messageInput.value,
+                to_email: "brunorm07@hotmail.com"
+            };
             
-            // Validate name
-            if (!nameInput.value.trim()) {
-                nameError.style.display = 'block';
-                isValid = false;
-            }
-            
-            // Validate email
-            if (!validateEmail(emailInput.value)) {
-                emailError.style.display = 'block';
-                isValid = false;
-            }
-            
-            // Validate phone
-            if (!validatePhone(phoneInput.value)) {
-                phoneError.style.display = 'block';
-                isValid = false;
-            }
-            
-            // Validate message
-            if (!messageInput.value.trim()) {
-                messageError.style.display = 'block';
-                isValid = false;
-            }
-            
-            if (isValid) {
-                // Mostrar loading
-                submitButton.style.display = 'none';
-                formLoading.style.display = 'block';
-                
-                // Enviar email usando EmailJS
-                const templateParams = {
-                    from_name: nameInput.value,
-                    from_email: emailInput.value,
-                    from_phone: phoneInput.value,
-                    message: messageInput.value,
-                    to_email: "brunorm07@hotmail.com"
-                };
-                
-                // SUBSTITUA COM SUAS CREDENCIAIS DO EMAILJS
-                emailjs.send('service_seu_servico', 'template_seu_template', templateParams)
-                    .then(function(response) {
-                        console.log('SUCCESS!', response.status, response.text);
-                        
-                        // Feedback para o usuário
-                        formLoading.style.display = 'none';
-                        formSuccess.style.display = 'block';
-                        contactForm.reset();
-                        
-                        // Scroll to success message
-                        formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        
-                        // Restore submit button after 5 seconds
-                        setTimeout(() => {
-                            formSuccess.style.display = 'none';
-                            submitButton.style.display = 'inline-flex';
-                        }, 5000);
-                    }, function(error) {
-                        console.log('FAILED...', error);
-                        formLoading.style.display = 'none';
+            // SUBSTITUA COM SUAS CREDENCIAIS DO EMAILJS
+            emailjs.send('service_seu_servico', 'template_seu_template', templateParams)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    
+                    // Feedback para o usuário
+                    formLoading.style.display = 'none';
+                    formSuccess.style.display = 'block';
+                    contactForm.reset();
+                    
+                    // Scroll to success message
+                    formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    
+                    // Restore submit button after 5 seconds
+                    setTimeout(() => {
+                        formSuccess.style.display = 'none';
                         submitButton.style.display = 'inline-flex';
-                        alert('Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente mais tarde ou entre em contato diretamente pelo WhatsApp.');
-                    });
+                    }, 5000);
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    formLoading.style.display = 'none';
+                    submitButton.style.display = 'inline-flex';
+                    alert('Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente mais tarde ou entre em contato diretamente pelo WhatsApp.');
+                });
+        }
+    });
+    
+    // Back to top functionality
+    document.querySelector('.back-to-top').addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
             }
         });
+    });
+    
+    // Animation on scroll
+    function animateOnScroll() {
+        const elements = document.querySelectorAll('.service-card, .about-image, .stat-item, .experience-card');
         
-        // Back to top functionality
-        document.querySelector('.back-to-top').addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-        
-        // Animation on scroll
-        function animateOnScroll() {
-            const elements = document.querySelectorAll('.service-card, .pricing-card, .about-image, .stat-item, .experience-card');
+        elements.forEach(element => {
+            const elementPosition = element.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.3;
             
-            elements.forEach(element => {
-                const elementPosition = element.getBoundingClientRect().top;
-                const screenPosition = window.innerHeight / 1.3;
-                
-                if (elementPosition < screenPosition) {
-                    element.classList.add('animate__animated', 'animate__fadeInUp');
-                }
-            });
-        }
-        
-        window.addEventListener('scroll', animateOnScroll);
-        // Trigger once on load
-        window.addEventListener('load', animateOnScroll);
-        
-        // FAQ Accordion
-        const accordionItems = document.querySelectorAll('.accordion-item');
-        
-        accordionItems.forEach(item => {
-            const header = item.querySelector('.accordion-header');
-            
-            header.addEventListener('click', () => {
-                const isActive = item.classList.contains('active');
-                
-                // Close all items
-                accordionItems.forEach(accItem => {
-                    accItem.classList.remove('active');
-                    accItem.querySelector('.accordion-content').classList.remove('active');
-                });
-                
-                // Open clicked item if it wasn't active
-                if (!isActive) {
-                    item.classList.add('active');
-                    item.querySelector('.accordion-content').classList.add('active');
-                }
-            });
+            if (elementPosition < screenPosition) {
+                element.classList.add('animate__animated', 'animate__fadeInUp');
+            }
         });
-    </script>
+    }
+    
+    window.addEventListener('scroll', animateOnScroll);
+    // Trigger once on load
+    window.addEventListener('load', animateOnScroll);
+    
+    // FAQ Accordion
+    const accordionItems = document.querySelectorAll('.accordion-item');
+    
+    accordionItems.forEach(item => {
+        const header = item.querySelector('.accordion-header');
+        
+        header.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+            
+            // Close all items
+            accordionItems.forEach(accItem => {
+                accItem.classList.remove('active');
+                accItem.querySelector('.accordion-content').classList.remove('active');
+            });
+            
+            // Open clicked item if it wasn't active
+            if (!isActive) {
+                item.classList.add('active');
+                item.querySelector('.accordion-content').classList.add('active');
+            }
+        });
+    });
+</script>
 </body>
 </html>
