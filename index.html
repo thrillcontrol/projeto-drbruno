@@ -2016,7 +2016,7 @@ h1, h2, h3, h4, h5, h6 {
     </div>
 </section>
 
-<!-- Contact Section - COMPLETAMENTE ATUALIZADA -->
+<!-- Contact Section -->
 <section id="contato" class="contact">
     <div class="container">
         <div class="section-title">
@@ -2068,12 +2068,12 @@ h1, h2, h3, h4, h5, h6 {
                 <h3 class="form-title">Envie uma mensagem</h3>
                 <p class="form-subtitle">Preencha o formulário abaixo e retornaremos em breve</p>
                 
-                <!-- FORMULÁRIO ATUALIZADO COM FORMSUBMIT -->
+               
                 <form action="https://formsubmit.co/brunorm07@hotmail.com" method="POST" id="contactForm">
                     <!-- Configurações do FormSubmit -->
                     <input type="hidden" name="_subject" value="Novo contato do site - Dr. Bruno Ribeiro">
                     <input type="hidden" name="_template" value="table">
-                    <input type="hidden" name="_next" value="https://seusite.com/obrigado.html">
+                    <input type="hidden" name="_next" value="#formSuccess">
                     <input type="hidden" name="_captcha" value="false">
                     
                     <div class="form-group">
@@ -2194,7 +2194,7 @@ h1, h2, h3, h4, h5, h6 {
 </div>
 
 <script>
-    // Menu Mobile para o novo header
+   // Menu Mobile para o novo header
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
     const header = document.querySelector('header');
@@ -2248,7 +2248,7 @@ h1, h2, h3, h4, h5, h6 {
         }
     });
 
-    // Form Validation and Submission - ATUALIZADO PARA FORMSUBMIT
+    // Form Validation and Submission - CORRIGIDO
     const contactForm = document.getElementById('contactForm');
     const nameInput = document.getElementById('name');
     const emailInput = document.getElementById('email');
@@ -2268,8 +2268,10 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     function validatePhone(phone) {
-        const re = /^\(?\d{2}\)?[\s-]?\d{4,5}-?\d{4}$/;
-        return re.test(phone);
+        // Remove caracteres não numéricos
+        const cleanedPhone = phone.replace(/\D/g, '');
+        // Verifica se tem entre 10 e 11 dígitos
+        return cleanedPhone.length >= 10 && cleanedPhone.length <= 11;
     }
     
     contactForm.addEventListener('submit', (e) => {
@@ -2313,21 +2315,21 @@ h1, h2, h3, h4, h5, h6 {
             submitButton.style.display = 'none';
             formLoading.style.display = 'block';
             
-            // O FormSubmit cuidará do envio, então apenas mostramos o sucesso
-            setTimeout(() => {
-                formLoading.style.display = 'none';
-                formSuccess.style.display = 'block';
-                contactForm.reset();
-                
-                // Scroll to success message
+            // Permitir que o FormSubmit envie o formulário
+            // A mensagem de sucesso será exibida após o redirecionamento
+        }
+    });
+    
+    // Verificar se há parâmetro de sucesso na URL (após o redirecionamento do FormSubmit)
+    window.addEventListener('load', function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('success')) {
+            formSuccess.style.display = 'block';
+            
+            // Rolagem suave para a mensagem de sucesso
+            setTimeout(function() {
                 formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                
-                // Restore submit button after 5 seconds
-                setTimeout(() => {
-                    formSuccess.style.display = 'none';
-                    submitButton.style.display = 'inline-flex';
-                }, 5000);
-            }, 1500);
+            }, 300);
         }
     });
     
