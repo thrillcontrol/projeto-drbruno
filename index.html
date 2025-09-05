@@ -999,6 +999,7 @@ h1, h2, h3, h4, h5, h6 {
             margin-bottom: 0.5rem;
             color: var(--primary-dark);
             font-size: 1.2rem;
+            transition: var(--transition);
         }
         
         .contact-details p, .contact-details a {
@@ -1124,7 +1125,7 @@ h1, h2, h3, h4, h5, h6 {
         
         .form-success {
             background: #d4edda;
-            color: #155724;
+            color:  #155724;
             padding: 1.2rem;
             border-radius: var(--border-radius);
             margin-top: 1.5rem;
@@ -1802,7 +1803,7 @@ h1, h2, h3, h4, h5, h6 {
                 
                 <p class="about-text">
                     Acreditando que cada paciente é único, o Dr. Bruno desenvolve tratamentos individualizados 
-                    baseados em evidências científicas, sempre com empatia, respeito e comprometimento com os 
+                    baseados em evidências científicas, sempre dengan empatia, respeito e comprometimento com os 
                     melhores resultados. Seu objetivo vai além da reabilitação: é devolver qualidade de vida, 
                     autonomia e confiança para que você retome suas atividades com segurança e bem-estar.
                 </p>
@@ -1876,7 +1877,7 @@ h1, h2, h3, h4, h5, h6 {
                     </div>
                     <h3 class="experience-title">Melhoria Contínua</h3>
                     <ul class="experience-list">
-                        <li>Buscar constantemente aperfeiçoamento em técnicas, procedimentos e tratamentos baseados em evidências científicas</li>
+                        <li>Buscar constantemente aperfeiçoamento em técnicas, procedimentos and tratamentos baseados em evidências científicas</li>
                     </ul>
                 </div>
                 
@@ -2061,6 +2062,8 @@ h1, h2, h3, h4, h5, h6 {
                 <div class="contact-social">
                     <a href="https://www.instagram.com/drbrunoribeiroo?igsh=MXJtYnF6Mjh1bmg0cg%3D%3D&utm_source=qr" class="social-link"><i class="fab fa-instagram"></i></a>
                     <a href="https://wa.me/5511954822375" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    <!-- LinkedIn adicionado aos ícones sociais -->
+                    <a href="https://www.linkedin.com/in/bruno-r-martins-aa647a334?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
             
@@ -2143,6 +2146,8 @@ h1, h2, h3, h4, h5, h6 {
                 <div class="social-links">
                     <a href="https://www.instagram.com/drbrunoribeiroo?igsh=MXJtYnF6Mjh1bmg0cg%3D%3D&utm_source=qr" class="social-link"><i class="fab fa-instagram"></i></a>
                     <a href="https://wa.me/5511954822375" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    <!-- LinkedIn adicionado no footer -->
+                    <a href="https://www.linkedin.com/in/bruno-r-martins-aa647a334?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
             
@@ -2174,6 +2179,8 @@ h1, h2, h3, h4, h5, h6 {
                     <li><a href="https://wa.me/5511954822375" class="footer-link"><i class="fab fa-whatsapp"></i> (11) 95482-2375</a></li>
                     <li><a href="mailto:brunorm07@hotmail.com" class="footer-link"><i class="fas fa-envelope"></i> brunorm07@hotmail.com</a></li>
                     <li><a href="#contato" class="footer-link"><i class="fas fa-map-marker-alt"></i> Atendimento domiciliar</a></li>
+                    <!-- LinkedIn adicionado no rodapé -->
+                    <li><a href="https://www.linkedin.com/in/bruno-r-martins-aa647a334?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="footer-link" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
                 </ul>
             </div>
         </div>
@@ -2306,7 +2313,7 @@ contactForm.addEventListener('submit', async (e) => {
     // Validate message
     if (!messageInput.value.trim()) {
         messageError.style.display = 'block';
-        isValid = false;
+        isValid = край;
     }
 
     if (!isValid) return;
