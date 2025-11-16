@@ -104,7 +104,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
         :root {
             /* 🎨 Cores principais */
@@ -1472,6 +1471,71 @@
             100% { transform: scale(1); }
         }
         
+        /* NOVAS ANIMAÇÕES DE SCROLL */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .scroll-reveal-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s ease;
+        }
+        
+        .scroll-reveal-left.revealed {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .scroll-reveal-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.8s ease;
+        }
+        
+        .scroll-reveal-right.revealed {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .scroll-reveal-scale {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: all 0.8s ease;
+        }
+        
+        .scroll-reveal-scale.revealed {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        .scroll-reveal-delay-1 {
+            transition-delay: 0.1s;
+        }
+        
+        .scroll-reveal-delay-2 {
+            transition-delay: 0.2s;
+        }
+        
+        .scroll-reveal-delay-3 {
+            transition-delay: 0.3s;
+        }
+        
+        .scroll-reveal-delay-4 {
+            transition-delay: 0.4s;
+        }
+        
+        .scroll-reveal-delay-5 {
+            transition-delay: 0.5s;
+        }
+        
         /* Responsive Design */
         @media screen and (max-width: 1200px) {
             .header-container {
@@ -1641,6 +1705,17 @@
             .contact-form-container {
                 padding: 2rem 1.5rem;
             }
+            
+            /* Ajustes para animações em mobile */
+            .scroll-reveal-left,
+            .scroll-reveal-right {
+                transform: translateY(30px);
+            }
+            
+            .scroll-reveal-left.revealed,
+            .scroll-reveal-right.revealed {
+                transform: translateY(0);
+            }
         }
         
         @media screen and (max-width: 576px) {
@@ -1740,7 +1815,7 @@
     <!-- Hero Section -->
     <section id="inicio" class="hero">
         <div class="container hero-container">
-            <div class="hero-content">
+            <div class="hero-content scroll-reveal">
                 <h1>Dr. Bruno Ribeiro <span>Fisioterapeuta</span></h1>
                 <h2 class="hero-subtitle">Reabilitação, Prevenção e Tratamentos Especializados.</h2>
                 <div class="hero-buttons">
@@ -1751,7 +1826,7 @@
                 </div>
             </div>
             
-            <div class="hero-image">
+            <div class="hero-image scroll-reveal-scale">
                 <div class="hero-image-content">
                     <img src="img/ft-apresentação.png" alt="Dr. Bruno Ribeiro - Fisioterapeuta especializado em fisioterapia ortopédica e esportiva" class="bruno-foto">
                 </div>
@@ -1763,25 +1838,25 @@
     <section class="stats-section">
         <div class="container">
             <div class="stats-container">
-                <div class="stat-item">
+                <div class="stat-item scroll-reveal scroll-reveal-delay-1">
                     <div class="stat-icon">
                         <i class="fas fa-heart"></i>
                     </div>
                     <div class="stat-text">Atendimento Humanizado</div>
                 </div>
-                <div class="stat-item">
+                <div class="stat-item scroll-reveal scroll-reveal-delay-2">
                     <div class="stat-icon">
                         <i class="fas fa-user-md"></i>
                     </div>
                     <div class="stat-text">Acompanhamento Personalizado</div>
                 </div>
-                <div class="stat-item">
+                <div class="stat-item scroll-reveal scroll-reveal-delay-3">
                     <div class="stat-icon">
                         <i class="fas fa-hand-holding-heart"></i>
                     </div>
                     <div class="stat-text">Dedicação à sua Saúde</div>
                 </div>
-                <div class="stat-item">
+                <div class="stat-item scroll-reveal scroll-reveal-delay-4">
                     <div class="stat-icon">
                         <i class="fas fa-smile"></i>
                     </div>
@@ -1794,12 +1869,12 @@
     <!-- Services Section -->
     <section id="servicos" class="services">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title scroll-reveal">
                 <h2>Nossos Serviços</h2>
             </div>
             
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card scroll-reveal scroll-reveal-delay-1">
                     <div class="service-icon">
                         <img src="img/osso-articulacao.png" alt="Fisioterapia Ortopédica" style="width: 60px; height: 60px; object-fit: contain;">
                     </div>
@@ -1807,7 +1882,7 @@
                     <p class="service-description">Tratamento de disfunções musculoesqueléticas, com foco na reabilitação de lesões e melhora da mobilidade.</p>
                 </div>
                 
-                <div class="service-card">
+                <div class="service-card scroll-reveal scroll-reveal-delay-2">
                     <div class="service-icon">
                         <i class="fas fa-wheelchair"></i>
                     </div>
@@ -1815,7 +1890,7 @@
                     <p class="service-description">Recuperação de traumas e lesões resultantes de acidentes, com técnicas especializadas para cada caso.</p>
                 </div>
                 
-                <div class="service-card">
+                <div class="service-card scroll-reveal scroll-reveal-delay-3">
                     <div class="service-icon">
                         <i class="fas fa-running"></i>
                     </div>
@@ -1823,7 +1898,7 @@
                     <p class="service-description">Prevenção e tratamento de lesões em atletas, garantindo retorno seguro às atividades esportivas.</p>
                 </div>
                 
-                <div class="service-card">
+                <div class="service-card scroll-reveal scroll-reveal-delay-4">
                     <div class="service-icon">
                         <i class="fas fa-dumbbell"></i>
                     </div>
@@ -1831,7 +1906,7 @@
                     <p class="service-description">Programas personalizados para ganho de força muscular e melhora do condicionamento físico.</p>
                 </div>
                 
-                <div class="service-card">
+                <div class="service-card scroll-reveal scroll-reveal-delay-5">
                     <div class="service-icon">
                         <i class="fas fa-user-injured"></i>
                     </div>
@@ -1839,7 +1914,7 @@
                     <p class="service-description">Preparação para cirurgias e reabilitação no período pós-operatório para recuperação mais rápida.</p>
                 </div>
                 
-                <div class="service-card">
+                <div class="service-card scroll-reveal scroll-reveal-delay-1">
                     <div class="service-icon">
                         <i class="fas fa-hands"></i>
                     </div>
@@ -1853,18 +1928,18 @@
     <!-- About Section -->
     <section id="sobre" class="about">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title scroll-reveal">
                 <h2>Sobre o Dr. Bruno Ribeiro</h2>
             </div>
             
             <div class="about-container">
-                <div class="about-image">
+                <div class="about-image scroll-reveal-left">
                     <div class="about-image-placeholder">
                         <img src="img/ft-biografia.png" alt="Dr. Bruno Ribeiro - Fisioterapeuta com formação em ortopedia e traumatologia" class="bruno-foto">
                     </div>
                 </div>
                 
-                <div class="about-content">
+                <div class="about-content scroll-reveal-right">
                     <p class="about-text">
                         Com paixão pela reabilitação e cuidado humano, o Dr. Bruno Ribeiro dedica-se a transformar vidas 
                         através da fisioterapia. Sua abordagem combina conhecimento técnico avançado com atendimento 
@@ -1872,28 +1947,28 @@
                     </p>
                     
                     <div class="qualities-grid">
-                        <div class="quality-item">
+                        <div class="quality-item scroll-reveal scroll-reveal-delay-1">
                             <div class="quality-icon">
                                 <i class="fas fa-university"></i>
                             </div>
                             <div class="quality-text">Graduado em Fisioterapia pela UNIP</div>
                         </div>
                         
-                        <div class="quality-item">
+                        <div class="quality-item scroll-reveal scroll-reveal-delay-2">
                             <div class="quality-icon">
                                 <i class="fas fa-medal"></i>
                             </div>
                             <div class="quality-text">Pós-graduado em Fisioterapia Traumato-Ortopédica e Esportiva pela FMABC</div>
                         </div>
                         
-                        <div class="quality-item">
+                        <div class="quality-item scroll-reveal scroll-reveal-delay-3">
                             <div class="quality-icon">
                                 <i class="fas fa-brain"></i>
                             </div>
                             <div class="quality-text">Curso do Congresso Internacional de Neurociência no Esporte</div>
                         </div>
                         
-                        <div class="quality-item">
+                        <div class="quality-item scroll-reveal scroll-reveal-delay-4">
                             <div class="quality-icon">
                                 <i class="fas fa-hands"></i>
                             </div>
@@ -1901,7 +1976,7 @@
                         </div>
                     </div>
                     
-                    <p class="about-text">
+                    <p class="about-text scroll-reveal scroll-reveal-delay-5">
                         Acreditando que cada paciente é único, o Dr. Bruno desenvolve tratamentos individualizados 
                         baseados em evidências científicas, sempre com empatia, respeito e comprometimento com os 
                         melhores resultados. Seu objetivo vai além da reabilitação: é devolver qualidade de vida, 
@@ -1915,13 +1990,13 @@
     <!-- Valores da Empresa Section -->
     <section id="valores" class="experience-section">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title scroll-reveal">
                 <h2>Nossos Valores</h2>
             </div>
             
             <div class="experience-container">
                 <div class="experience-grid">
-                    <div class="experience-card">
+                    <div class="experience-card scroll-reveal scroll-reveal-delay-1">
                         <div class="experience-icon">
                             <i class="fas fa-hand-holding-heart"></i>
                         </div>
@@ -1931,7 +2006,7 @@
                         </ul>
                     </div>
                     
-                    <div class="experience-card">
+                    <div class="experience-card scroll-reveal scroll-reveal-delay-2">
                         <div class="experience-icon">
                             <i class="fas fa-scale-balanced"></i>
                         </div>
@@ -1941,7 +2016,7 @@
                         </ul>
                     </div>
                     
-                    <div class="experience-card">
+                    <div class="experience-card scroll-reveal scroll-reveal-delay-3">
                         <div class="experience-icon">
                             <i class="fas fa-globe"></i>
                         </div>
@@ -1951,7 +2026,7 @@
                         </ul>
                     </div>
                     
-                    <div class="experience-card">
+                    <div class="experience-card scroll-reveal scroll-reveal-delay-4">
                         <div class="experience-icon">
                             <i class="fas fa-medal"></i>
                         </div>
@@ -1961,7 +2036,7 @@
                         </ul>
                     </div>
                     
-                    <div class="experience-card">
+                    <div class="experience-card scroll-reveal scroll-reveal-delay-5">
                         <div class="experience-icon">
                             <i class="fas fa-star"></i>
                         </div>
@@ -1971,7 +2046,7 @@
                         </ul>
                     </div>
                     
-                    <div class="experience-card">
+                    <div class="experience-card scroll-reveal scroll-reveal-delay-1">
                         <div class="experience-icon">
                             <i class="fas fa-chart-line"></i>
                         </div>
@@ -1981,7 +2056,7 @@
                         </ul>
                     </div>
                     
-                    <div class="experience-card">
+                    <div class="experience-card scroll-reveal scroll-reveal-delay-2">
                         <div class="experience-icon">
                             <i class="fas fa-building"></i>
                         </div>
@@ -1991,7 +2066,7 @@
                         </ul>
                     </div>
                     
-                    <div class="experience-card">
+                    <div class="experience-card scroll-reveal scroll-reveal-delay-3">
                         <div class="experience-icon">
                             <i class="fas fa-shield-alt"></i>
                         </div>
@@ -2001,7 +2076,7 @@
                         </ul>
                     </div>
                     
-                    <div class="experience-card">
+                    <div class="experience-card scroll-reveal scroll-reveal-delay-4">
                         <div class="experience-icon">
                             <i class="fas fa-users"></i>
                         </div>
@@ -2018,13 +2093,13 @@
     <!-- Experience Section -->
     <section id="experiencia" class="experience-section">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title scroll-reveal">
                 <h2>Experiência Profissional</h2>
             </div>
             
             <div class="experience-container">
                 <div class="experience-grid">
-                    <div class="experience-card">
+                    <div class="experience-card scroll-reveal scroll-reveal-delay-1">
                         <div class="experience-icon">
                             <i class="fas fa-users"></i>
                         </div>
@@ -2036,7 +2111,7 @@
                         </ul>
                     </div>
                     
-                    <div class="experience-card">
+                    <div class="experience-card scroll-reveal scroll-reveal-delay-2">
                         <div class="experience-icon">
                             <i class="fas fa-hospital-user"></i>
                         </div>
@@ -2049,7 +2124,7 @@
                         </ul>
                     </div>
                     
-                    <div class="experience-card">
+                    <div class="experience-card scroll-reveal scroll-reveal-delay-3">
                         <div class="experience-icon">
                             <i class="fas fa-graduation-cap"></i>
                         </div>
@@ -2069,12 +2144,12 @@
     <!-- FAQ Section -->
     <section class="faq-section">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title scroll-reveal">
                 <h2>Perguntas Frequentes</h2>
             </div>
             
             <div class="accordion">
-                <div class="accordion-item">
+                <div class="accordion-item scroll-reveal scroll-reveal-delay-1">
                     <div class="accordion-header">
                         <span>Como agendar uma consulta?</span>
                         <i class="fas fa-chevron-down accordion-icon"></i>
@@ -2084,7 +2159,7 @@
                     </div>
                 </div>
                 
-                <div class="accordion-item">
+                <div class="accordion-item scroll-reveal scroll-reveal-delay-2">
                     <div class="accordion-header">
                         <span>Quais regiões são atendidas?</span>
                         <i class="fas fa-chevron-down accordion-icon"></i>
@@ -2094,7 +2169,7 @@
                     </div>
                 </div>
                 
-                <div class="accordion-item">
+                <div class="accordion-item scroll-reveal scroll-reveal-delay-3">
                     <div class="accordion-header">
                         <span>Quanto tempo dura cada sessão?</span>
                         <i class="fas fa-chevron-down accordion-icon"></i>
@@ -2104,7 +2179,7 @@
                     </div>
                 </div>
                 
-                <div class="accordion-item">
+                <div class="accordion-item scroll-reveal scroll-reveal-delay-4">
                     <div class="accordion-header">
                         <span>Quais são as formas de pagamento?</span>
                         <i class="fas fa-chevron-down accordion-icon"></i>
@@ -2120,16 +2195,16 @@
     <!-- Contact Section -->
     <section id="contato" class="contact">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title scroll-reveal">
                 <h2>Entre em Contato</h2>
             </div>
             
             <div class="contact-container">
                 <div class="contact-info">
-                    <h2 class="contact-info-title">Vamos conversar?</h2>
-                    <p class="contact-info-desc">Estou à disposição para esclarecer suas dúvidas e agendar seu tratamento. Entre em contato por qualquer um dos canais abaixo:</p>
+                    <h2 class="contact-info-title scroll-reveal">Vamos conversar?</h2>
+                    <p class="contact-info-desc scroll-reveal scroll-reveal-delay-1">Estou à disposição para esclarecer suas dúvidas e agendar seu tratamento. Entre em contato por qualquer um dos canais abaixo:</p>
                     
-                    <div class="contact-item">
+                    <div class="contact-item scroll-reveal scroll-reveal-delay-2">
                         <div class="contact-icon">
                             <i class="fab fa-whatsapp"></i>
                         </div>
@@ -2139,7 +2214,7 @@
                         </div>
                     </div>
                     
-                    <div class="contact-item">
+                    <div class="contact-item scroll-reveal scroll-reveal-delay-3">
                         <div class="contact-icon">
                             <i class="fas fa-envelope"></i>
                         </div>
@@ -2149,7 +2224,7 @@
                         </div>
                     </div>
                     
-                    <div class="contact-item">
+                    <div class="contact-item scroll-reveal scroll-reveal-delay-4">
                         <div class="contact-icon">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
@@ -2160,13 +2235,13 @@
                     </div>
                     
                     <div class="contact-social">
-                        <a href="https://www.instagram.com/drbrunoribeiroo?igsh=MXJtYnF6Mjh1bmg0cg%3D%3D&utm_source=qr" class="social-link" aria-label="Siga no Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://wa.me/5511954822375" class="social-link" aria-label="Entre em contato pelo WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                        <a href="https://www.linkedin.com/in/bruno-r-martins-aa647a334?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="social-link" aria-label="Conecte-se no LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/drbrunoribeiroo?igsh=MXJtYnF6Mjh1bmg0cg%3D%3D&utm_source=qr" class="social-link scroll-reveal scroll-reveal-delay-1" aria-label="Siga no Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/5511954822375" class="social-link scroll-reveal scroll-reveal-delay-2" aria-label="Entre em contato pelo WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.linkedin.com/in/bruno-r-martins-aa647a334?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="social-link scroll-reveal scroll-reveal-delay-3" aria-label="Conecte-se no LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
                 
-                <div class="contact-form-container">
+                <div class="contact-form-container scroll-reveal-scale">
                     <h3 class="form-title">Envie uma mensagem</h3>
                     <p class="form-subtitle">Preencha o formulário abaixo e retornaremos em breve</p>
                     
@@ -2241,49 +2316,49 @@
         <div class="container">
             <div class="footer-container">
                 <div class="footer-col">
-                    <a href="#inicio" class="footer-logo">
+                    <a href="#inicio" class="footer-logo scroll-reveal">
                         DR<br>BRUNO<br>RIBEIRO
                         <span>FISIOTERAPEUTA</span>
                     </a>
-                    <p class="footer-text">
+                    <p class="footer-text scroll-reveal scroll-reveal-delay-1">
                         Fisioterapia especializada com foco na reabilitação, prevenção e qualidade de vida. Atendimento domiciliar na Grande São Paulo.
                     </p>
                     <div class="social-links">
-                        <a href="https://www.instagram.com/drbrunoribeiroo?igsh=MXJtYnF6Mjh1bmg0cg%3D%3D&utm_source=qr" class="social-link" aria-label="Siga no Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://wa.me/5511954822375" class="social-link" aria-label="Entre em contato pelo WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                        <a href="https://www.linkedin.com/in/bruno-r-martins-aa647a334?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="social-link" aria-label="Conecte-se no LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/drbrunoribeiroo?igsh=MXJtYnF6Mjh1bmg0cg%3D%3D&utm_source=qr" class="social-link scroll-reveal scroll-reveal-delay-2" aria-label="Siga no Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/5511954822375" class="social-link scroll-reveal scroll-reveal-delay-3" aria-label="Entre em contato pelo WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.linkedin.com/in/bruno-r-martins-aa647a334?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="social-link scroll-reveal scroll-reveal-delay-4" aria-label="Conecte-se no LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
                 
                 <div class="footer-col">
-                    <h3 class="footer-title">Links Rápidos</h3>
+                    <h3 class="footer-title scroll-reveal">Links Rápidos</h3>
                     <ul class="footer-links">
-                        <li><a href="#inicio" class="footer-link"><i class="fas fa-chevron-right"></i> Início</a></li>
-                        <li><a href="#servicos" class="footer-link"><i class="fas fa-chevron-right"></i> Serviços</a></li>
-                        <li><a href="#sobre" class="footer-link"><i class="fas fa-chevron-right"></i> Sobre</a></li>
-                        <li><a href="#valores" class="footer-link"><i class="fas fa-chevron-right"></i> Valores</a></li>
-                        <li><a href="#experiencia" class="footer-link"><i class="fas fa-chevron-right"></i> Experiência</a></li>
-                        <li><a href="#contato" class="footer-link"><i class="fas fa-chevron-right"></i> Contato</a></li>
+                        <li><a href="#inicio" class="footer-link scroll-reveal scroll-reveal-delay-1"><i class="fas fa-chevron-right"></i> Início</a></li>
+                        <li><a href="#servicos" class="footer-link scroll-reveal scroll-reveal-delay-2"><i class="fas fa-chevron-right"></i> Serviços</a></li>
+                        <li><a href="#sobre" class="footer-link scroll-reveal scroll-reveal-delay-3"><i class="fas fa-chevron-right"></i> Sobre</a></li>
+                        <li><a href="#valores" class="footer-link scroll-reveal scroll-reveal-delay-4"><i class="fas fa-chevron-right"></i> Valores</a></li>
+                        <li><a href="#experiencia" class="footer-link scroll-reveal scroll-reveal-delay-5"><i class="fas fa-chevron-right"></i> Experiência</a></li>
+                        <li><a href="#contato" class="footer-link scroll-reveal scroll-reveal-delay-1"><i class="fas fa-chevron-right"></i> Contato</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-col">
-                    <h3 class="footer-title">Serviços</h3>
+                    <h3 class="footer-title scroll-reveal">Serviços</h3>
                     <ul class="footer-links">
-                        <li><a href="#servicos" class="footer-link"><i class="fas fa-chevron-right"></i> Fisioterapia Ortopédica</a></li>
-                        <li><a href="#servicos" class="footer-link"><i class="fas fa-chevron-right"></i> Fisioterapia Traumatológica</a></li>
-                        <li><a href="#servicos" class="footer-link"><i class="fas fa-chevron-right"></i> Fisioterapia Esportiva</a></li>
-                        <li><a href="#servicos" class="footer-link"><i class="fas fa-chevron-right"></i> Liberação Miofascial</a></li>
+                        <li><a href="#servicos" class="footer-link scroll-reveal scroll-reveal-delay-1"><i class="fas fa-chevron-right"></i> Fisioterapia Ortopédica</a></li>
+                        <li><a href="#servicos" class="footer-link scroll-reveal scroll-reveal-delay-2"><i class="fas fa-chevron-right"></i> Fisioterapia Traumatológica</a></li>
+                        <li><a href="#servicos" class="footer-link scroll-reveal scroll-reveal-delay-3"><i class="fas fa-chevron-right"></i> Fisioterapia Esportiva</a></li>
+                        <li><a href="#servicos" class="footer-link scroll-reveal scroll-reveal-delay-4"><i class="fas fa-chevron-right"></i> Liberação Miofascial</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-col">
-                    <h3 class="footer-title">Contato</h3>
+                    <h3 class="footer-title scroll-reveal">Contato</h3>
                     <ul class="footer-links">
-                        <li><a href="https://wa.me/5511954822375" class="footer-link"><i class="fab fa-whatsapp"></i> (11) 95482-2375</a></li>
-                        <li><a href="mailto:brunorm07@hotmail.com?subject=Consulta%20Fisioterapia&body=Olá! Gostaria de agendar uma consulta." class="footer-link"><i class="fas fa-envelope"></i> brunorm07@hotmail.com</a></li>
-                        <li><a href="#contato" class="footer-link"><i class="fas fa-map-marker-alt"></i> Atendimento domiciliar</a></li>
-                        <li><a href="https://www.linkedin.com/in/bruno-r-martins-aa647a334?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="footer-link" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                        <li><a href="https://wa.me/5511954822375" class="footer-link scroll-reveal scroll-reveal-delay-1"><i class="fab fa-whatsapp"></i> (11) 95482-2375</a></li>
+                        <li><a href="mailto:brunorm07@hotmail.com?subject=Consulta%20Fisioterapia&body=Olá! Gostaria de agendar uma consulta." class="footer-link scroll-reveal scroll-reveal-delay-2"><i class="fas fa-envelope"></i> brunorm07@hotmail.com</a></li>
+                        <li><a href="#contato" class="footer-link scroll-reveal scroll-reveal-delay-3"><i class="fas fa-map-marker-alt"></i> Atendimento domiciliar</a></li>
+                        <li><a href="https://www.linkedin.com/in/bruno-r-martins-aa647a334?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="footer-link scroll-reveal scroll-reveal-delay-4" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
                     </ul>
                 </div>
             </div>
@@ -2511,23 +2586,25 @@
         });
     });
 
-    // Animation on scroll
-    function animateOnScroll() {
-        const elements = document.querySelectorAll('.service-card, .about-image, .stat-item, .experience-card');
+    // NOVA ANIMAÇÃO DE SCROLL COM INTERSECTION OBSERVER
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
 
-        elements.forEach(element => {
-            const elementPosition = element.getBoundingClientRect().top;
-            const screenPosition = window.innerHeight / 1.3;
-
-            if (elementPosition < screenPosition) {
-                element.classList.add('animate__animated', 'animate__fadeInUp');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
             }
         });
-    }
+    }, observerOptions);
 
-    window.addEventListener('scroll', animateOnScroll);
-    // Trigger once on load
-    window.addEventListener('load', animateOnScroll);
+    // Observar todos os elementos com classes de animação
+    document.querySelectorAll('.scroll-reveal, .scroll-reveal-left, .scroll-reveal-right, .scroll-reveal-scale').forEach(el => {
+        observer.observe(el);
+    });
 
     // FAQ Accordion
     const accordionItems = document.querySelectorAll('.accordion-item');
